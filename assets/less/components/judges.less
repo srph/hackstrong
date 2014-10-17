@@ -5,3 +5,60 @@
 .judges-head {
 	color: @color-red;
 }
+
+.judge {
+	height: auto;
+	margin-bottom: 25px;
+	clear: none;
+	.make-row();
+	.margin-hr(0);
+}
+
+.judge::after {
+	position: relative;
+	top: 100%;
+	.margin-hr();
+	.pseudo-display();
+	background-color: @color-gray-dk;
+	width: 25px;
+	height: 1px;
+}
+
+.judge-avatar {
+	@avatar-size: 75px;
+
+	display: block;
+	height: @avatar-size;
+	width: @avatar-size;
+	.circular();
+	.margin-hr();
+	// Random bg color
+	background: #ddd;
+	background-size: cover;
+	background-position: center center;
+}
+
+.judge-name {
+	.text-center();
+	color: @color-red;
+}
+
+.judge-text {
+	.text-center();
+}
+
+@media(min-width: @screen-sm-max) {
+	.judge-name,
+	.judge-text {
+		.text-left();
+	}
+
+	.judge-avatar {
+		.margin-hr(0);
+	}
+
+	.judge::after {
+		background-color: transparent;
+		margin-bottom: 50px;
+	}
+}

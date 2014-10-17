@@ -1,0 +1,50 @@
+.btn {
+	color: @color-gray-dk;
+	border: 1px solid @color-gray-dk;
+	background: none;
+	font-weight: @gotham-wt-ultra;
+	.padding-hr(25px);
+	.u-uppercase();
+}
+
+.btn:hover,
+.btn:focus {
+	color: @color-white;
+	border-color: transparent;
+	background-color: @color-gray-dk;
+	transition: all @transition-duration-long;
+}
+
+.btn.btn-rounded {
+	border-radius: 20px;
+}
+
+.btn > .btn-icon {
+	margin-right: 3px;
+}
+
+// Mixin for creating different color
+// variations fort the buttons
+// -----
+.btn-variation(@color) {
+	color: @color;
+	border-color: @color;
+
+	&:hover,
+	&:focus {
+		color: @color-white;
+		background-color: @color;
+	}
+}
+
+// button variations
+// -----
+.btn.btn-success {
+	.btn-variation(@color-green);
+}
+.btn.btn-danger {
+	.btn-variation(@color-red);
+}
+.btn.btn-primary {
+	.btn-variation(@color-blue);
+}

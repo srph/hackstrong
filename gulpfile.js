@@ -6,13 +6,15 @@ paths.less = './assets/less/';
 /** Dependencies */
 var gulp                = require('gulp'),
     less                = require('gulp-less'),
-    rename              = require('gulp-rename');
+    rename              = require('gulp-rename'),
+    autoprefixer        = require('gulp-autoprefixer');
 
 gulp.task('less', function () {
     var file = 'stylesheet.css';
 
     return gulp.src(paths.less + 'hack.less')
         .pipe(less())
+        .pipe(autoprefixer())
         .pipe(rename(file))
         .pipe(gulp.dest(paths.css));
 });

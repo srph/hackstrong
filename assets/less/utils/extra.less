@@ -1,4 +1,10 @@
 @component-padding: 25px;
+@transition-duration: 0.15s;
+@transition-duration-long: 0.20s;
+
+.circular {
+	border-radius: 50%;
+}
 
 // Used to display pseudo-selectors
 // -----
@@ -12,7 +18,17 @@
 	padding-bottom: @size;
 }
 
+.padding-hr(@size) {
+	padding-left: @size;
+	padding-right: @size;
+}
+
 .margin-vt(@size) {
 	margin-top: @size;
 	margin-bottom: @size;
+}
+
+.margin-hr(@size: auto) {
+	margin-left: @size;
+	margin-right: @size;
 }

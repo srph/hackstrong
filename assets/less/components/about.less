@@ -9,11 +9,39 @@
 	color: @about-head-color;
 }
 
+.about .about-item {
+	position: relative;
+}
+
+// Adds a margin to the mobile-version
+.about .about-item:not(:last-child) {
+	margin-bottom: 25px;
+}
+
 .about .about-box {
 	@about-box-padding: floor(@component-padding / 2);
 
 	border: 1px solid @about-box-color;
 	padding: @about-box-padding;
+
+	&:not(:last-child) {
+		margin-bottom: 25px;
+	}
+}
+
+.about-box .about-box-icon {
+	color: @color-gray-dk;
+	margin-right: 10px;
+	font-size: 16px;
+}
+
+// Special caes for the venue icon
+.about-box .about-box-icon.about-box-icon-lg {
+	font-size: 20px;
+}
+
+.about-box .about-box-text {
+	margin-bottom: 15px;
 }
 
 .about-box .about-box-head {
@@ -27,9 +55,22 @@
 
 .about-box .about-box-head::after {
 	position: relative;
-	.margin-vt(10px);
+	.margin-vt(8px);
 	.pseudo-display();
 	height: 1px;
 	width: 30px;
 	background-color: @about-box-color;
+}
+
+@media (min-width: @screen-sm-max) {
+	.about-box {
+		height: 200px;
+	}
+
+	.about-btn {
+		position: absolute;
+		bottom: 25px;
+		left: 0;
+		right: 0;
+	}
 }
