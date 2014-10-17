@@ -1,0 +1,32 @@
+@about-box-color: @color-gray-dk;
+@about-head-color: @color-blue;
+
+.about {
+	.component(@color-ateneo-white);
+}
+
+.about .about-head {
+	color: @about-head-color;
+}
+
+.about .about-box {
+	@about-box-padding: floor(@component-padding / 2);
+
+	border: 1px solid @about-box-color;
+	padding: @about-box-padding;
+}
+
+.about-box .about-box-head {
+	.u-uppercase();
+	color: @about-head-color;
+	font-weight: @gotham-wt-ultra;
+}
+
+.about-box .about-box-head::after {
+	position: relative;
+	.margin-vt(10px);
+	.pseudo-display();
+	height: 1px;
+	width: 30px;
+	background-color: @about-box-color;
+}

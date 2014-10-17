@@ -1,0 +1,248 @@
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  width: 100% \9;
+  max-width: 100%;
+  height: auto;
+}
+.form-horizontal .form-group-sm .form-control {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.form-horizontal .form-group-lg .form-control {
+  height: 46px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+.btn-group-lg > .btn {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+.btn-group-sm > .btn {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.btn-group-xs > .btn {
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.dl-horizontal dd:before,
+.dl-horizontal dd:after,
+.container:before,
+.container:after,
+.container-fluid:before,
+.container-fluid:after,
+.row:before,
+.row:after,
+.form-horizontal .form-group:before,
+.form-horizontal .form-group:after,
+.btn-toolbar:before,
+.btn-toolbar:after,
+.btn-group-vertical > .btn-group:before,
+.btn-group-vertical > .btn-group:after,
+.nav:before,
+.nav:after,
+.navbar:before,
+.navbar:after,
+.navbar-header:before,
+.navbar-header:after,
+.navbar-collapse:before,
+.navbar-collapse:after,
+.pager:before,
+.pager:after,
+.panel-body:before,
+.panel-body:after,
+.modal-footer:before,
+.modal-footer:after {
+  content: " ";
+  display: table;
+}
+.dl-horizontal dd:after,
+.container:after,
+.container-fluid:after,
+.row:after,
+.form-horizontal .form-group:after,
+.btn-toolbar:after,
+.btn-group-vertical > .btn-group:after,
+.nav:after,
+.navbar:after,
+.navbar-header:after,
+.navbar-collapse:after,
+.pager:after,
+.panel-body:after,
+.modal-footer:after {
+  clear: both;
+}
+@font-face {
+  font-family: "Gotham";
+  font-weight: 100;
+  src: local('Gotham-Light'), local('GothamLight'), local('Gotham Light'), url('/assets/fonts/Gotham-Light.otf') format('otf');
+}
+@font-face {
+  font-family: "Gotham";
+  font-weight: 200;
+  src: local('Gotham-Thin'), local('GothamThin'), local('Gotham Thin'), url('/assets/fonts/Gotham-Thin.otf') format('otf');
+}
+@font-face {
+  font-family: "Gotham";
+  font-weight: 300;
+  src: local('Gotham-Book'), local('GothamBook'), local('Gotham Book'), url('/assets/fonts/Gotham-Book.otf') format('otf');
+}
+@font-face {
+  font-family: "Gotham";
+  font-weight: 400;
+  src: local('Gotham-Medium'), local('GothamMedium'), local('Gotham Medium'), url('/assets/fonts/Gotham-Medium.otf') format('otf');
+}
+@font-face {
+  font-family: "Gotham";
+  font-weight: 500;
+  src: local('Gotham-Bold'), local('GothamBold'), local('Gotham Bold'), url('/assets/fonts/Gotham-Bold.otf') format('otf');
+}
+@font-face {
+  font-family: "Gotham";
+  font-weight: 600;
+  src: local('Gotham-Black'), local('GothamBlack'), local('Gotham Black'), url('/assets/fonts/Gotham-Black.otf') format('otf');
+}
+@font-face {
+  font-family: "Gotham";
+  font-weight: 700;
+  src: local('Gotham-Ultra'), local('GothamUltra'), local('Gotham Ultra'), url('/assets/fonts/Gotham-Ultra.otf') format('otf');
+}
+.type-center-inner {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+.home .home-welcome-sub::after {
+  position: relative;
+  right: -5px;
+  top: -5px;
+  display: inline-block;
+  content: "";
+  height: 1px;
+  width: 25px;
+  background-color: #ffffff;
+}
+.u-uppercase {
+  text-transform: uppercase;
+}
+html,
+body {
+  font-family: "Gotham", Helvetica, Helvetica Neue, sans-serif, serif;
+}
+.component-head {
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.home {
+  height: 100vh;
+  width: 100%;
+  color: #ffffff;
+  background-color: #1b2db5;
+}
+.home .home-outer-wrapper {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+.home .home-outer-wrapper > .home-inner-wrapper {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+.home .home-logo {
+  width: 240px;
+}
+.home .home-welcome-header {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.home .home-welcome-sub {
+  letter-spacing: 0.5px;
+  font-size: 13px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+}
+.home .home-welcome-sub::before {
+  position: relative;
+  left: -5px;
+  top: -5px;
+  display: inline-block;
+  content: "";
+  width: 25px;
+  height: 1px;
+  background-color: #ffffff;
+}
+.home .home-welcome-sub::after {
+  position: relative;
+  right: -5px;
+  top: -5px;
+  display: inline-block;
+  content: "";
+  height: 1px;
+  width: 25px;
+  background-color: #ffffff;
+}
+.about {
+  height: auto;
+  min-height: 100vh;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: #ffffff;
+}
+.about .about-head {
+  color: #26afff;
+}
+.about .about-box {
+  border: 1px solid #cecece;
+  padding: 12px;
+}
+.about-box .about-box-head {
+  text-transform: uppercase;
+  color: #26afff;
+  font-weight: 700;
+}
+.about-box .about-box-head::after {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+  content: "";
+  height: 1px;
+  width: 30px;
+  background-color: #cecece;
+}
+.judges {
+  height: auto;
+  min-height: 100vh;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: #f9f9f9;
+}
+.judges-head {
+  color: #ff001e;
+}
+.sponsors {
+  height: auto;
+  min-height: 100vh;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: #111111;
+}
+.sponsors .sponsors-head {
+  color: #28e9b0;
+}

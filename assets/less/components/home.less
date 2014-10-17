@@ -1,0 +1,48 @@
+.home {
+	@home-bg-color: @color-ateneo-blue;
+	@home-text-color: @color-ateneo-white;
+
+	height: 100vh;
+	width: 100%;
+
+	color: @home-text-color;
+	background-color: @home-bg-color;
+}
+
+.home .home-outer-wrapper {
+	.type-center-outer();
+}
+
+.home .home-outer-wrapper > .home-inner-wrapper {
+	.type-center-inner();
+}
+
+.home .home-logo {
+	@home-logo-width: 240px;
+
+	width: @home-logo-width;
+}
+
+.home .home-welcome-header {
+	font-weight: @gotham-wt-ultra;
+	text-transform: uppercase;
+}
+
+.home .home-welcome-sub {
+	@home-welcome-sub-font: @font-family-serif;
+	@home-welcome-sub-size: ceil(@font-size-base * 0.9);
+
+	letter-spacing: 0.5px;
+	font-size: @home-welcome-sub-size;
+	font-family: @home-welcome-sub-font;
+	font-style: italic;
+}
+
+// Rework done
+// -----
+.home .home-welcome-sub::before {
+	.typography-line-before(@color-ateneo-white);
+}
+.home .home-welcome-sub::after {
+	.typography-line-after(@color-ateneo-white);
+}
