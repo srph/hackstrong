@@ -6,12 +6,21 @@
 	color: @color-green;
 }
 
+@sponsor-height: 50px;
 .sponsor {
 	// .margin-hr(auto);
-	height: 200px;
+	height: @sponsor-height;
+	display: block;
+	.margin-hr();
 	margin-bottom: 25px;
 	filter: grayscale(100%);
 	transition: all (@transition-duration-long * 2);
+}
+
+@media (min-width: @screen-sm-max) {
+	.sponsor {
+		height: (@sponsor-height * 2);
+	}
 }
 
 .sponsor:hover {

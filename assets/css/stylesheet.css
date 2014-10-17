@@ -250,7 +250,7 @@ body {
 .home .home-welcome-shadow {
   text-shadow: #15238c 1px 1px, #15238d 2px 2px, #15238e 3px 3px, #15248f 4px 4px, #152491 5px 5px, #162492 6px 6px, #162593 7px 7px, #162594 8px 8px, #162596 9px 9px, #162597 10px 10px, #162698 11px 11px, #172699 12px 12px, #17269b 13px 13px, #17279c 14px 14px, #17279d 15px 15px, #17279e 16px 16px, #1828a0 17px 17px, #1828a1 18px 18px, #1828a2 19px 19px, #1828a3 20px 20px, #1829a4 21px 21px, #1829a6 22px 22px, #1929a7 23px 23px, #192aa8 24px 24px, #192aa9 25px 25px, #192aab 26px 26px, #192aac 27px 27px, #192bad 28px 28px, #1a2bae 29px 29px, #1a2bb0 30px 30px, #1a2cb1 31px 31px, #1a2cb2 32px 32px, #1a2cb3 33px 33px, #1b2db5 34px 34px;
   -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+          transition: all 0.5s ease;
 }
 .home .home-welcome-sub::before {
   position: relative;
@@ -302,6 +302,9 @@ body {
   z-index: 100;
   -webkit-animation: home-btn-animate 0.75s infinite;
           animation: home-btn-animate 0.75s infinite;
+}
+.js-home-btn-interactive {
+  visibility: hidden;
 }
 @-webkit-keyframes home-btn-animate {
   0% {
@@ -369,7 +372,7 @@ body {
 }
 .about-box .about-box-icon {
   color: #cecece;
-  margin-right: 10px;
+  margin-right: 8px;
   font-size: 16px;
 }
 .about-box .about-box-icon.about-box-icon-lg {
@@ -421,8 +424,8 @@ body {
   color: #ff001e;
 }
 .judge {
-  height: auto;
-  margin-bottom: 25px;
+  height: 126px;
+  margin-bottom: 50px;
   clear: none;
   margin-left: -15px;
   margin-right: -15px;
@@ -431,7 +434,6 @@ body {
 }
 .judge::after {
   position: relative;
-  top: 100%;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -469,7 +471,6 @@ body {
   }
   .judge::after {
     background-color: transparent;
-    margin-bottom: 50px;
   }
 }
 .sponsors {
@@ -488,12 +489,20 @@ body {
   color: #28e9b0;
 }
 .sponsor {
-  height: 200px;
+  height: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 25px;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
   -webkit-transition: all 0.4s;
           transition: all 0.4s;
+}
+@media (min-width: 991px) {
+  .sponsor {
+    height: 100px;
+  }
 }
 .sponsor:hover {
   -webkit-filter: grayscale(0%);

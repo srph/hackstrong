@@ -169,9 +169,11 @@
 //             }
 var main = $('.home-welcome-header');
 var sub = $('.home-welcome-sub');
+var logo = $('.home-logo');
 var headI = $('.home-inner-wrapper');
 var headO = $('.home-outer-wrapper');
-var sc = $(window);
+var btn = $('.home-btn-interactive');
+var win = $(window);
 
 (function($, undefined) {
     var animationEnds = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
@@ -180,20 +182,37 @@ var sc = $(window);
     main.one(animationEnds, function bounceInUp (e) {
         sub.addClass(shadow);
         main.addClass(shadow)
+
+        setTimeout(function () {
+            logo.addClass('tada animated');
+        }, 500);
+    });
+
+    logo.one(animationEnds, function btnInteractive (e) {
+        btn.removeClass('js-home-btn-interactive');
     });
 })(jQuery);
 
 (function($, undefined) {
-    sc.scroll(function onScroll (e) {
+    win.scroll(function onScroll (e) {
         // console.log(headO.scrollTop());
-        var size = sc.height();
-        var scroll = sc.scrollTop();
+        var size = win.height();
+        var scroll = win.scrollTop();
         var opacity = ( size - scroll ) / size;
-        console.log(opacity);
-        // console.log(opacity);
 
         headI.css({
             'opacity': opacity
         });
+    });
+})(jQuery);
+
+(function($, undefined) {
+    $('.home-btn-interactive, .home-btn').on('click', function() {
+        var h = win.height();
+        console.log(h);
+
+        $('html, body').animate({
+            scrollTop: h
+        }, 1000);
     });
 })(jQuery);

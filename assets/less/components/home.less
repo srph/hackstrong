@@ -87,9 +87,6 @@
     rgb(26, 44, 179) 33px 33px,
     rgb(27, 45, 181) 34px 34px;
 
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
 
@@ -136,6 +133,11 @@
 	z-index: 100;
 
 	animation: home-btn-animate 0.75s infinite;
+}
+
+// For the sake of js
+.js-home-btn-interactive {
+	visibility: hidden;
 }
 
 @keyframes home-btn-animate {
