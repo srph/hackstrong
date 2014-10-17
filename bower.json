@@ -15,6 +15,7 @@
   "dependencies": {
     "bootstrap": "~3.2.0",
     "jquery": "~2.1.1",
-    "ionicons": "~1.5.2"
+    "ionicons": "~1.5.2",
+    "threejs": "*"
   }
 }

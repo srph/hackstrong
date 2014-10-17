@@ -4,6 +4,7 @@
   <title>Hackstrong</title>
   <meta charset="utf-8">
 
+  <link rel="stylesheet" href="assets/vendor/animate.css/animate.min.css">
   <link rel="stylesheet" href="assets/vendor/ionicons/css/ionicons.min.css">
   <link rel="stylesheet" href="assets/vendor/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="assets/css/stylesheet.css">
@@ -13,8 +14,16 @@
     <div class="home-outer-wrapper">
       <div class="home-inner-wrapper container">
         <img src="assets/img/logo.png" class="home-logo">
-        <h1 class="home-welcome-header"> HackStrong </h1>
-        <h4 class="home-welcome-sub"> At heart, we hack! </h4>
+        <h1 class="home-welcome-header bounceInDown animated"> HackStrong </h1>
+        <h4 class="home-welcome-sub bounceInUp animated"> At heart, we hack! </h4>
+
+        <div class="home-btn-group">
+
+          <button class="home-btn" type="button">
+            <i class="ion-arrow-down-b home-btn-icon"></i>
+          </button>
+          <div class="home-btn-interactive"></div>
+        </div>
       </div>
     </div>
   </section>
@@ -152,7 +161,21 @@
 
   <footer class="sponsors">
     <h4 class="component-head sponsors-head"> Sponsors </h4>
+    <div class="container">
+      <div class="col-md-4 col-xs-12">
+        <img src="assets/img/vine.png" class="sponsor">
+      </div>
+
+      <div class="col-md-4 col-xs-12">
+        <img src="assets/img/vine.png" class="sponsor">
+      </div>
+
+      <div class="col-md-4 col-xs-12">
+        <img src="assets/img/hp.png" class="sponsor">
+      </div>
+    </div>
   </footer>
+  <script src="assets/vendor/threejs/build/three.min.js"></script>
   <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="assets/js/scripts.js"></script>
