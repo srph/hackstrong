@@ -176,43 +176,48 @@ var btn = $('.home-btn-interactive');
 var win = $(window);
 
 (function($, undefined) {
-    var animationEnds = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-    var shadow = 'home-welcome-shadow';
+    $(document).ready(function() {
+        (function() {
+            var animationEnds = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+            var shadow = 'home-welcome-shadow';
 
-    main.one(animationEnds, function bounceInUp (e) {
-        sub.addClass(shadow);
-        main.addClass(shadow)
+            main.one(animationEnds, function bounceInUp (e) {
+                sub.addClass(shadow);
+                main.addClass(shadow)
 
-        setTimeout(function () {
-            logo.addClass('tada animated');
-        }, 500);
-    });
+                setTimeout(function () {
+                    logo.addClass('tada animated');
+                }, 500);
+            });
 
-    logo.one(animationEnds, function btnInteractive (e) {
-        btn.removeClass('js-home-btn-interactive');
-    });
-})(jQuery);
+            logo.one(animationEnds, function btnInteractive (e) {
+                btn.removeClass('js-home-btn-interactive');
+            });
+        })();
 
-(function($, undefined) {
-    win.scroll(function onScroll (e) {
-        // console.log(headO.scrollTop());
-        var size = win.height();
-        var scroll = win.scrollTop();
-        var opacity = ( size - scroll ) / size;
+        (function() {
+            win.scroll(function onScroll (e) {
+                // console.log(headO.scrollTop());
+                var size = win.height();
+                var scroll = win.scrollTop();
+                var opacity = ( size - scroll ) / size;
 
-        headI.css({
-            'opacity': opacity
-        });
-    });
-})(jQuery);
+                headI.css({
+                    'opacity': opacity
+                });
+            });
+        })();
 
-(function($, undefined) {
-    $('.home-btn-interactive, .home-btn').on('click', function() {
-        var h = win.height();
-        console.log(h);
+        (function() {
+            $('.home-btn-interactive, .home-btn').on('click', function() {
+                var h = win.height();
+                console.log(h);
 
-        $('html, body').animate({
-            scrollTop: h
-        }, 1000);
-    });
+                $('html, body').animate({
+                    scrollTop: h
+                }, 1000);
+            });
+        })();
+
+    })();
 })(jQuery);
