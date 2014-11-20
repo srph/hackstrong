@@ -1,42 +1,52 @@
-@path-fonts: '/assets/fonts';
+@path-fonts-gotham: '@{path-fonts}/gotham';
+
+// Gotham font weights
+// -----
+@gotham-wt-light	: 	100;
+@gotham-wt-thin		: 	200;
+@gotham-wt-book		: 	300;
+@gotham-wt-medium	: 	400;
+@gotham-wt-bold		: 	500;
+@gotham-wt-black	: 	600;
+@gotham-wt-ultra	: 	700;
 
 @font-face {
 	font-family: "Gotham";
 	font-weight: @gotham-wt-light;
-	src: local('Gotham-Light'), local('GothamLight'), local('Gotham Light'), url('@{path-fonts}/Gotham-Light.otf') format('otf');
+	src: local('Gotham-Light'), local('GothamLight'), local('Gotham Light'), url('@{path-fonts-gotham}/gotham-light.otf') format('otf');
 }
 
 @font-face {
 	font-family: "Gotham";
 	font-weight: @gotham-wt-thin;
-	src: local('Gotham-Thin'), local('GothamThin'), local('Gotham Thin'), url('@{path-fonts}/Gotham-Thin.otf') format('otf');
+	src: local('Gotham-Thin'), local('GothamThin'), local('Gotham Thin'), url('@{path-fonts-gotham}/gotham-thin.otf') format('otf');
 }
 
 @font-face {
 	font-family: "Gotham";
 	font-weight: @gotham-wt-book;
-	src: local('Gotham-Book'), local('GothamBook'), local('Gotham Book'), url('@{path-fonts}/Gotham-Book.otf') format('otf');
+	src: local('Gotham-Book'), local('GothamBook'), local('Gotham Book'), url('@{path-fonts-gotham}/gotham-book.otf') format('otf');
 }
 @font-face {
 	font-family: "Gotham";
 	font-weight: @gotham-wt-medium;
-	src: local('Gotham-Medium'), local('GothamMedium'), local('Gotham Medium'), url('@{path-fonts}/Gotham-Medium.otf') format('otf');
+	src: local('Gotham-Medium'), local('GothamMedium'), local('Gotham Medium'), url('@{path-fonts-gotham}/gotham-medium.otf') format('otf');
 }
 
 @font-face {
 	font-family: "Gotham";
 	font-weight: @gotham-wt-bold;
-	src: local('Gotham-Bold'), local('GothamBold'), local('Gotham Bold'), url('@{path-fonts}/Gotham-Bold.otf') format('otf');
+	src: local('Gotham-Bold'), local('GothamBold'), local('Gotham Bold'), url('@{path-fonts-gotham}/gotham-bold.otf') format('otf');
 }
 
 @font-face {
 	font-family: "Gotham";
 	font-weight: @gotham-wt-black;
-	src: local('Gotham-Black'), local('GothamBlack'), local('Gotham Black'), url('@{path-fonts}/Gotham-Black.otf') format('otf');
+	src: local('Gotham-Black'), local('GothamBlack'), local('Gotham Black'), url('@{path-fonts-gotham}/gotham-black.otf') format('otf');
 }
 
 @font-face {
 	font-family: "Gotham";
 	font-weight: @gotham-wt-ultra;
-	src: local('Gotham-Ultra'), local('GothamUltra'), local('Gotham Ultra'), url('@{path-fonts}/Gotham-Ultra.otf') format('otf');
+	src: local('Gotham-Ultra'), local('GothamUltra'), local('Gotham Ultra'), url('@{path-fonts-gotham}/gotham-ultra.otf') format('otf');
 }
