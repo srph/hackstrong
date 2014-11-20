@@ -2,6 +2,10 @@
 	@home-bg-color: @color-ateneo-blue;
 	@home-text-color: @color-ateneo-white;
 
+	// for the navbar
+	// position: relative;
+	// margin-top: 50px;
+
 	// min-height: 100vh;
 	// height: auto;
 	height: 100vh;
@@ -9,22 +13,34 @@
 
 	color: @home-text-color;
 	background-color: @home-bg-color;
+	overflow: hidden;
 }
 
-.home .home-outer-wrapper {
-	.type-center-outer();
+@media (min-width: @screen-lg-min) {
+	.home {
+		background-color: #000;
+	}
 }
 
-.home .home-outer-wrapper > .home-inner-wrapper {
-	.type-center-inner();
+// Video wrapper
+.home .home-video-wrapper {	opacity: 0; }
+@media(min-width: @screen-lg-min) {
+	.home .home-video-wrapper { opacity: 0.5; }
 }
+
+
+.home .home-outer-wrapper { .type-center-outer(); }
+.home .home-outer-wrapper > .home-inner-wrapper { .type-center-inner(); }
+.home .home-btn-group *:first-child { margin-right: 10px; }
+.home .home-btn-group *:last-child { margin-left: 10px; }
 
 @home-logo-width: 240px;
+
 .home .home-logo {
 	width: @home-logo-width / 2;
 
 	// for the long shadows
-	margin-top: (@home-logo-width / 6);
+	// margin-top: (@home-logo-width / 6);
 	margin-right: (@home-logo-width / 6) * -1;
 	margin-bottom: (@home-logo-width / 6) * -1;
 }
@@ -32,6 +48,8 @@
 @media(min-width: @screen-sm-max) {
 	.home .home-logo {
 		width: @home-logo-width;
+		margin-right: (@home-logo-width / 4) * -1;
+		margin-bottom: (@home-logo-width / 4) * -1;
 	}
 }
 
@@ -44,48 +62,30 @@
 	@home-welcome-sub-font: @font-family-serif;
 	@home-welcome-sub-size: ceil(@font-size-base * 0.9);
 
-	letter-spacing: 0.5px;
+	letter-spacing: 1px;
 	font-size: @home-welcome-sub-size;
-	font-family: @home-welcome-sub-font;
-	font-style: italic;
+	// font-weight: 100;
+	// font-family: @home-welcome-sub-font;
+	// font-style: italic;
+	text-transform: uppercase;
 }
 
 // ts
 .home .home-welcome-shadow {
-	text-shadow: rgb(21, 35, 140) 1px 1px,
-    rgb(21, 35, 141) 2px 2px,
-    rgb(21, 35, 142) 3px 3px,
-    rgb(21, 36, 143) 4px 4px,
-    rgb(21, 36, 145) 5px 5px,
-    rgb(22, 36, 146) 6px 6px,
-    rgb(22, 37, 147) 7px 7px,
-    rgb(22, 37, 148) 8px 8px,
-    rgb(22, 37, 150) 9px 9px,
-    rgb(22, 37, 151) 10px 10px,
-    rgb(22, 38, 152) 11px 11px,
-    rgb(23, 38, 153) 12px 12px,
-    rgb(23, 38, 155) 13px 13px,
-    rgb(23, 39, 156) 14px 14px,
-    rgb(23, 39, 157) 15px 15px,
-    rgb(23, 39, 158) 16px 16px,
-    rgb(24, 40, 160) 17px 17px,
-    rgb(24, 40, 161) 18px 18px,
-    rgb(24, 40, 162) 19px 19px,
-    rgb(24, 40, 163) 20px 20px,
-    rgb(24, 41, 164) 21px 21px,
-    rgb(24, 41, 166) 22px 22px,
-    rgb(25, 41, 167) 23px 23px,
-    rgb(25, 42, 168) 24px 24px,
-    rgb(25, 42, 169) 25px 25px,
-    rgb(25, 42, 171) 26px 26px,
-    rgb(25, 42, 172) 27px 27px,
-    rgb(25, 43, 173) 28px 28px,
-    rgb(26, 43, 174) 29px 29px,
-    rgb(26, 43, 176) 30px 30px,
-    rgb(26, 44, 177) 31px 31px,
-    rgb(26, 44, 178) 32px 32px,
-    rgb(26, 44, 179) 33px 33px,
-    rgb(27, 45, 181) 34px 34px;
+	text-shadow: rgb(24, 41, 163) 1px 1px,
+    rgb(24, 41, 163) 2px 2px,
+    rgb(24, 41, 163) 3px 3px,
+    rgb(24, 41, 163) 4px 4px,
+    rgb(24, 41, 163) 5px 5px,
+    rgb(24, 41, 165) 6px 6px,
+    rgb(24, 41, 167) 7px 7px,
+    rgb(25, 42, 169) 8px 8px,
+    rgb(25, 42, 171) 9px 9px,
+    rgb(25, 43, 173) 10px 10px,
+    rgb(26, 43, 175) 11px 11px,
+    rgb(26, 44, 177) 12px 12px,
+    rgb(26, 44, 179) 13px 13px,
+    rgb(27, 45, 181) 14px 14px;
 
     transition: all 0.5s ease;
 }
@@ -99,8 +99,7 @@
 	.typography-line-after(@color-ateneo-white);
 }
 
-.home-btn {
-	
+.home-btn {	
 	@home-btn-size: 45px;
 	@home-btn-padding: floor(@home-btn-size / 4);
 

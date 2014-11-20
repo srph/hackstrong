@@ -3,6 +3,7 @@
 <head>
   <title>Hackstrong</title>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="assets/vendor/animate.css/animate.min.css">
   <link rel="stylesheet" href="assets/vendor/ionicons/css/ionicons.min.css">
@@ -10,26 +11,38 @@
   <link rel="stylesheet" href="assets/css/stylesheet.css">
 </head>
 <body>
+  <nav class="navbar navbar-hack navbar-fixed-top" role="navigation" data-navbar-activate>
+    <section class="container navbar-collapse" id="main-nav">
+      <ul class="nav navbar-nav">
+        <li><a href="#" data-animate-scroll=".home"> Home </a></li>
+        <li><a href="#" data-animate-scroll=".about"> FAQ </a></li>
+        <li><a href="#" data-animate-scroll=".judges"> Judges </a></li>
+        <li><a href="#" data-animate-scroll=".contact"> Contact </a></li>
+      </ul>
+    </section>
+  </nav>
   <section class="home">
+    <aside class="video-wrapper home-video-wrapper">
+      <video autoplay muted loop>
+        <source src="assets/videos/video.webm" type="video/webm">
+      </video>
+    </aside>
     <div class="home-outer-wrapper">
       <div class="home-inner-wrapper container">
         <img src="assets/img/logo.png" class="home-logo">
         <h1 class="home-welcome-header bounceInDown animated"> HackStrong </h1>
         <h4 class="home-welcome-sub bounceInUp animated"> At heart, we hack! </h4>
 
-        <div class="home-btn-group">
-
-          <button class="home-btn" type="button">
-            <i class="ion-arrow-down-b home-btn-icon"></i>
-          </button>
-          <div class="home-btn-interactive js-home-btn-interactive"></div>
-        </div>
+        <aside class="home-btn-group">
+          <a href="#" class="btn btn-rounded" data-animate-scroll=".about">FAQ</a>
+          <a href="#" class="btn btn-inverted-primary btn-rounded" data-animate-scroll=".register">Register Now!</a>
+        </aside>
       </div>
     </div>
   </section>
 
   <section class="about">
-    <h4 class="component-head about-head"> About </h4>
+    <h4 class="component-head about-head"> Hackstrong FAQ </h4>
     <div class="container">
       <div class="row">
         <div class="col-md-4 col-xs-12 about-item">
@@ -44,7 +57,7 @@
             </p>
 
             <div class="text-center about-btn">
-              <button class="btn btn-primary btn-rounded">
+              <button class="btn btn-inverted-dk btn-rounded">
                 <i class="ion-play btn-icon"></i>
                 Play Trailer
               </button>
@@ -64,10 +77,10 @@
             </p>
 
             <div class="text-center about-btn">
-              <button class="btn btn-primary btn-rounded">
+              <a href="https://www.google.com.ph/maps/place/Ateneo+de+Manila+University/@14.639718,121.078077,17z/data=!3m1!4b1!4m2!3m1!1s0x3397b77fd9e304c9:0x61ad426d7c6cce9e?hl=en" class="btn btn-inverted-dk btn-rounded" target="_blank">
                 <i class="ion-map btn-icon"></i>
                 View Map
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -82,13 +95,6 @@
             <p class="about-box-text">
               Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
             </p>
-
-            <div class="text-center about-btn">
-              <button class="btn btn-primary btn-rounded">
-                <i class="ion-map btn-icon"></i>
-                View Map
-              </button>
-            </div>
           </div>
         </div>
 
@@ -104,7 +110,7 @@
             </p>
 
             <div class="text-center about-btn">
-              <button class="btn btn-primary btn-rounded">
+              <button class="btn btn-inverted-dk btn-rounded">
                 <i class="ion-play btn-icon"></i>
                 Play Trailer
               </button>
@@ -124,7 +130,7 @@
             </p>
 
             <div class="text-center about-btn">
-              <button class="btn btn-primary btn-rounded">
+              <button class="btn btn-inverted-dk btn-rounded">
                 <i class="ion-map btn-icon"></i>
                 View Map
               </button>
@@ -142,13 +148,6 @@
             <p class="about-box-text">
               Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
             </p>
-
-            <div class="text-center about-btn">
-              <button class="btn btn-primary btn-rounded">
-                <i class="ion-map btn-icon"></i>
-                View Map
-              </button>
-            </div>
           </div>
         </div>
       </div>
@@ -158,104 +157,99 @@
   <section class="judges">
     <h4 class="component-head judges-head"> Judges </h4>
 
-    <div class="container">
-      <div class="row">
-        <div class="judge col-md-6">
-          <div class="col-xs-12 col-md-3">
-            <div class="judge-avatar" style="background-image:url(assets/img/pogi.jpg);"></div>
+    <div class="judge-container">
+      <article class="judge">
+        <div class="col-xs-9 col-md-9">
+          <header>
+            <h4 class="judge-name">Kier Borromeo </h4>
+            <h5 class="judge-title"> Software Engineer, Sourcescript </h5>
+          </header>
+          <p class="judge-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore.
+          </p>
+        </div>
+
+        <div class="col-xs-3 col-md-3">
+          <div class="judge-avatar" style="background-image:url(assets/img/pogi.jpg);">
           </div>
+        </div>
+      </article>
 
-          <div class="col-xs-12 col-md-9">
-            <h4 class="judge-name"> Kier Borromeo </h4>
-
-            <p class="judge-text">
-              Front-End Developer, SourceScript Innovations.
-            </p>
+      <article class="judge">
+        <div class="col-xs-3 col-md-3">
+          <div class="judge-avatar" style="background-image:url(assets/img/jc.jpg);">
           </div>
         </div>
 
-        <div class="judge col-md-6">
-          <div class="col-xs-12 col-md-3">
-            <div class="judge-avatar" style="background-image:url(assets/img/mark.jpg);"></div>
+        <div class="col-xs-9 col-md-9">
+          <header>
+            <h4 class="judge-name">JC Ricaro</h4>
+            <h5 class="judge-title"> Software Engineer, Sourcescript </h5>
+          </header>
+          <p class="judge-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore.
+          </p>
+        </div>
+      </article>
+
+      <article class="judge">
+        <div class="col-xs-9 col-md-9">
+          <header>
+            <h4 class="judge-name">Mark Penaranda</h4>
+            <h5 class="judge-title"> CEO &amp; Engineer, Sourcescript </h5>
+          </header>
+          <p class="judge-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore.
+          </p>
+        </div>
+
+        <div class="col-xs-3 col-md-3">
+          <div class="judge-avatar" style="background-image:url(assets/img/mark.jpg);">
           </div>
+        </div>
+      </article>
 
-          <div class="col-xs-12 col-md-9">
-            <h4 class="judge-name"> Mark Penaranda </h4>
-
-            <p class="judge-text">
-              CEO, SourceScript Innovations.
-            </p>
+      <article class="judge">
+        <div class="col-xs-3 col-md-3">
+          <div class="judge-avatar" style="background-image:url(assets/img/ry.jpg);">
           </div>
         </div>
 
-        <div class="judge col-md-6">
-          <div class="col-xs-12 col-md-3">
-            <div class="judge-avatar" style="background-image:url(assets/img/jc.jpg);"></div>
-          </div>
-
-          <div class="col-xs-12 col-md-9">
-            <h4 class="judge-name"> JC Ricaro </h4>
-
-            <p class="judge-text">
-              Pogi, SourceScript Innovations.          
-            </p>
-          </div>
+        <div class="col-xs-9 col-md-9">
+          <header>
+            <h4 class="judge-name">Ryan Navarroza</h4>
+            <h5 class="judge-title"> Systems Architect, Sourcescript </h5>
+          </header>
+          <p class="judge-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore.
+          </p>
         </div>
+      </article>
+    </div>
 
-        <div class="judge col-md-6">
-          <div class="col-xs-12 col-md-3">
-            <div class="judge-avatar" style="background-image:url(assets/img/ry.jpg);"></div>
-          </div>
-
-          <div class="col-xs-12 col-md-9">
-            <h4 class="judge-name"> Ryan Navarroza </h4>
-
-            <p class="judge-text">
-              Software Engineer, SourceScript Innovations.
-            </p>
-          </div>
-        </div>
-      </div>
+      <!-- button -->
+      <aside class="text-center">
+        <div class="btn btn-primary btn-lg btn-rounded">Be a Mentor!</div>
+      </aside>
     </div>
   </section>
 
-  <footer class="sponsors">
-    <h4 class="component-head sponsors-head"> Sponsors </h4>
+  <footer class="contact">
     <div class="container">
-      <div class="row">
-        <div class="col-md-4 col-xs-12">
-          <img src="assets/img/vine.png" class="sponsor">
-        </div>
-
-        <div class="col-md-4 col-xs-12">
-          <img src="assets/img/vine.png" class="sponsor">
-        </div>
-
-        <div class="col-md-4 col-xs-12">
-          <img src="assets/img/hp.png" class="sponsor">
-        </div>
-
-        <div class="col-md-4 col-xs-12">
-          <img src="assets/img/vine.png" class="sponsor">
-        </div>
-
-        <div class="col-md-4 col-xs-12">
-          <img src="assets/img/vine.png" class="sponsor">
-        </div>
-
-        <div class="col-md-4 col-xs-12">
-          <img src="assets/img/hp.png" class="sponsor">
-        </div>
-
-        <div class="col-md-4 col-xs-12">
-          <img src="assets/img/hp.png" class="sponsor">
-        </div>
-      </div>
+      <p class="text-center">
+        Contact us at <a href="emailto:ateneohacks@gmail.com">ateneohacks@gmail.com</a>.
+      </p>
     </div>
   </footer>
-  <script src="assets/vendor/threejs/build/three.min.js"></script>
   <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="assets/js/animate-scroll.js"></script>
+  <script src="assets/js/fade-on-scroll.js"></script>
+  <script src="assets/js/toggleNav-on-scroll.js"></script>
   <script src="assets/js/scripts.js"></script>
 </body>
 </html>

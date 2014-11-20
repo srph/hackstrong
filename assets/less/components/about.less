@@ -1,70 +1,78 @@
-@about-box-color: @color-gray-dk;
-@about-head-color: @color-blue;
+@about-box-color: rgba(0, 0, 0, 0.3);
+@about-head-color: @color-white;
+
+//
+// .about
+// 	.about-head
+// 	---------------
+// 	  .about-item
+// 	  	.about-box
+// 	  	  .about-box-head
+// 	  	  .about-box-itext
+// 	  	  .about-btn
+// 	  
 
 .about {
-	.component(@color-ateneo-white);
+	.component(@color-ateneo-blue);
+	color: @color-white;
 }
 
-.about .about-head {
-	color: @about-head-color;
-}
-
-.about .about-item {
-	position: relative;
-}
-
-// Adds a margin to the mobile-version
-.about .about-item:not(:last-child) {
-	margin-bottom: 25px;
-}
-
+.about .about-head { color: @about-head-color; }
+.about .about-item { position: relative; }
+.about .about-item { margin-bottom: 25px; }
 .about .about-box {
 	@about-box-padding: floor(@component-padding / 2);
 
-	border: 1px solid @about-box-color;
-	padding: @about-box-padding;
+	border: 2px solid @about-box-color;
+	.padding-vt(@component-padding);
+	.padding-hr(@about-box-padding);
 
 	&:not(:last-child) {
 		margin-bottom: 25px;
 	}
 }
 
-.about-box .about-box-icon {
-	color: @color-gray-dk;
-	margin-right: 8px;
-	font-size: 16px;
-}
-
-// Special caes for the venue icon
-.about-box .about-box-icon.about-box-icon-lg {
-	font-size: 20px;
-}
-
-.about-box .about-box-text {
-	margin-bottom: 15px;
-}
-
+// Item head
 .about-box .about-box-head {
 	// Remove
 	margin-top: 0;
 
 	.u-uppercase();
+	text-align: center;
 	color: @about-head-color;
-	font-weight: @gotham-wt-ultra;
 }
 
+// Item content
+.about-box .about-box-text {
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+// Item line / hr
 .about-box .about-box-head::after {
-	position: relative;
-	.margin-vt(8px);
 	.pseudo-display();
-	height: 1px;
-	width: 30px;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	.margin-hr();
+	position: relative;
+
+	height: 2px;
+	width: 75px;
 	background-color: @about-box-color;
 }
 
+// Item icon
+.about-box .about-box-icon {
+	display: block;
+	color: @about-box-color;
+	font-size: 24px;
+}
+// Special caes for the venue icon
+.about-box .about-box-icon.about-box-icon-lg { font-size: 30px; }
+
 @media (min-width: @screen-sm-max) {
 	.about-box {
-		height: 200px;
+		height: 280px;
 	}
 
 	.about-btn {

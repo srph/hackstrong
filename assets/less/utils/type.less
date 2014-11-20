@@ -4,6 +4,11 @@
 // Used to horizontally and vertically
 // center a type with tables
 .type-center-outer(@height: 100%, @width: 100%) {
+	// In case device height is way too small
+	margin-top: 50px;
+	margin-bottom: 50px;
+
+	// Actual
 	display: table;
 	height: @height;
 	width: @width;
@@ -14,11 +19,19 @@
 	vertical-align: middle;
 }
 
+// Remove excess margin for tablets / desktop users.
+@media (min-width: @screen-sm-max) {
+	.type-center-outer {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
+
 // Used to create a typographical line on the left side
 // of the type
 // Intended to be used for ::before
 // -----
-.typography-line-before(@bg-color: #000, @height: 1px, @width: 25px, @left: -5px, @top: -5px) {
+.typography-line-before(@bg-color: #000, @left: -5px, @top: -5px, @height: 1px, @width: 25px) {
 	position: relative;
 	left: @left;
 	top: @top;

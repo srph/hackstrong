@@ -1,27 +1,35 @@
-.judges {
-	.component(@color-gray);
+.judges { .component(@color-white); }
+.judges-head { color: @color-red; }
+
+.judge-container {
+	.margin-hr();
+	width: 100%;
 }
 
-.judges-head {
-	color: @color-red;
+@media(min-width: @screen-sm-max) {
+	.judge-container { width: 500px; }
 }
 
 .judge {
-	height: 126px;
 	margin-bottom: 50px;
-	clear: none;
 	.make-row();
 	.margin-hr(0);
 }
 
-.judge::after {
-	position: relative;
-	.margin-hr();
-	.pseudo-display();
-	background-color: @color-gray-dk;
-	width: 25px;
-	height: 1px;
+.judge:nth-child(2n+2) {
+	.judge-name,
+	.judge-title,
+	.judge-text { .text-right(); }
 }
+
+// .judge::after {
+// 	position: relative;
+// 	.margin-hr();
+// 	.pseudo-display();
+// 	background-color: @color-gray-dk;
+// 	width: 25px;
+// 	height: 1px;
+// }
 
 .judge-avatar {
 	@avatar-size: 75px;
@@ -31,6 +39,7 @@
 	width: @avatar-size;
 	.circular();
 	.margin-hr();
+	margin-top: 5px;
 	// Random bg color
 	background: #ddd;
 	background-size: cover;
@@ -38,17 +47,20 @@
 }
 
 .judge-name {
-	.text-center();
-	color: @color-red;
+	.margin-vt(0);
+	color: @color-blue;
 }
 
-.judge-text {
-	.text-center();
+// Judge title
+.judge-title {
+	margin-top: 2.5px;
+	margin-bottom: 7.5px;
+	color: @color-gray-dk;
 }
-
 @media(min-width: @screen-sm-max) {
 	.judge-name,
-	.judge-text {
+	.judge-text,
+	.judge-title {
 		.text-left();
 	}
 
@@ -56,7 +68,7 @@
 		.margin-hr(0);
 	}
 
-	.judge::after {
-		background-color: transparent;
-	}
+	// .judge::after {
+	// 	background-color: transparent;
+	// }
 }

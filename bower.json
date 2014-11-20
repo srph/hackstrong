@@ -17,6 +17,7 @@
     "jquery": "~2.1.1",
     "ionicons": "~1.5.2",
     "threejs": "*",
-    "animate.css": "~3.2.0"
+    "animate.css": "~3.2.0",
+    "bigSlide": "~0.5.1"
   }
 }

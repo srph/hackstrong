@@ -1,0 +1,111 @@
+// By default, this navbar style is transparent.
+.navbar-hack { background: transparent; }
+
+.navbar-hack .navbar-brand,
+.navbar-hack li a {
+	& { color: #fff; }
+	&.active,
+	&:hover,
+	&:focus { color: darken(#fff, 20%); }
+}
+
+@media (min-width: @screen-sm-max) {
+	.navbar-hack .navbar-brand,
+	.navbar-hack li a {
+		& { color: #fff; }
+
+		&.active,
+		&:hover,
+		&:focus { color: darken(#fff, 20%); }
+	}
+}
+
+
+.navbar-hack .navbar-toggle .icon-bar {
+	background: #fff;
+}
+
+// Center the nav
+.navbar-hack .navbar-collapse { text-align: center; }
+.navbar-hack .navbar-nav {
+	float: initial;
+	display: inline-block;
+}
+
+// Force each link to be in one row
+.navbar-hack li { display: inline-block; }
+
+// Style each link
+.navbar-hack li a {
+	& {
+		font-size: 11px;
+		.u-uppercase();
+	}
+
+	&.active,
+	&:hover,
+	&:focus { background-color: transparent; }
+}
+
+// -----------------
+// Active navbar
+// -----------------
+
+// background color
+.navbar-hack.is-active {
+	background: #fff;
+	box-shadow: 1px 0px 2px @color-gray-dk;
+}
+
+.navbar-hack.upwards {
+	// animation-name: navbarSlideUp;
+	// animation-duration: 1s;
+	top: -50px;
+	transition: 1s all;
+}
+.navbar-hack.downwards {
+	// animation-name: navbarSlideDown;
+	// animation-duration: 1s;
+	top: 0;
+	transition: 1s all;
+}
+
+// header | link color
+.navbar-hack.is-active .navbar-brand,
+.navbar-hack.is-active li a {
+	& { color: #000; }
+
+	&:hover,
+	&:focus { color: lighten(#000, 60%); }
+}
+
+.navbar-hack.is-active .navbar-toggle .icon-bar {
+	background: #000;
+}
+// -----------------
+
+
+// -----------------
+// Navigation animation
+// -----------------
+@keyframes navbarSlideUp {
+	from { top: 0px; }
+	to { top: -50px; }
+}
+
+@keyframes navbarSlideDown {
+	from { top: -50px; }
+	to { top: 0px; }
+}
+
+// -----------------
+// Hamburger
+// -----------------
+
+.hamburger.is-active {
+	.icon-bar { transition: 0.5s; }
+
+	.first-line { transform: rotate(45deg);	}
+	.second-line { opacity: 0; }
+	.third-line { transform: rotate(-45deg); }
+}
