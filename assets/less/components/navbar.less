@@ -42,7 +42,6 @@
 		.u-uppercase();
 	}
 
-	&.active,
 	&:hover,
 	&:focus { background-color: transparent; }
 }
@@ -72,11 +71,18 @@
 
 // header | link color
 .navbar-hack.is-active .navbar-brand,
-.navbar-hack.is-active li a {
+.navbar-hack.is-active li a, {
 	& { color: #000; }
 
 	&:hover,
 	&:focus { color: lighten(#000, 60%); }
+}
+
+.navbar-hack.is-active li.active a {
+	color: lighten(#000, 60%);
+
+	&:hover,
+	&:focus { color: lighten(#000, 30%); }
 }
 
 .navbar-hack.is-active .navbar-toggle .icon-bar {

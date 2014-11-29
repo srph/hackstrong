@@ -17,7 +17,9 @@
 
     // Animation speed
     var speed = element.data('scroll-speed') || 750,
-        offsetY = jqTarget.offset().top;
+        padding = element.data('padding') || 0;
+        offsetY = jqTarget.offset().top - padding;
+
 
     html.animate({ scrollTop: offsetY }, speed);
   });
