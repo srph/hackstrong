@@ -9,6 +9,28 @@
   <link rel="stylesheet" href="assets/vendor/ionicons/css/ionicons.min.css">
   <link rel="stylesheet" href="assets/vendor/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="assets/css/stylesheet.css">
+  <style>
+    #home {
+      position: absolute;
+      background: linear-gradient(90deg, rgba(255, 0, 0, 0.24), rgba(13, 13, 255, 0.28));
+    }
+    #home::before {
+      position: absolute;
+      display: block;
+      content: "";
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5));
+    }
+    #particle-js {
+      top: 0;
+      background: #000;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+    }
+  </style>
 </head>
 <body data-spy="scroll" data-target="#nav">
   <nav class="navbar navbar-hack navbar-fixed-top" role="navigation" data-navbar-activate id="nav">
@@ -23,15 +45,10 @@
     </section>
   </nav>
   <section class="home" id="home">
-    <aside class="video-wrapper home-video-wrapper">
-      <video autoplay muted loop>
-        <source src="assets/videos/video.webm" type="video/webm">
-      </video>
-    </aside>
     <div class="home-outer-wrapper">
       <div class="home-inner-wrapper container">
         <img src="assets/img/logo.png" class="home-logo">
-        <h1 class="home-welcome-header bounceInDown animated"> HackStrong </h1>
+        <h1 class="home-welcome-header bounceInDown animated"> Hacks </h1>
         <h4 class="home-welcome-sub bounceInUp animated"> At heart, we hack! </h4>
 
         <aside class="home-btn-group" style="margin-top: 50px;">
@@ -40,6 +57,9 @@
       </div>
     </div>
   </section>
+
+  <div id="particle-js">
+  </div>
 
   <section class="about" id="about">
     <h4 class="component-head about-head"> Hackstrong FAQ </h4>
@@ -262,8 +282,12 @@
           <img src="/assets/logos/uber.png" class="img-responsive">
         </article>
 
-        <article class="col-md-4 sponsor sponsor-sm-margin">
+        <article class="col-md-4 sponsor">
           <img src="/assets/logos/dalluyon.png" class="img-responsive">
+        </article>
+
+        <article class="col-md-4 sponsor sponsor-sm-margin sponsor-center">
+          <img src="/assets/logos/chikka.png" class="img-responsive">
         </article>
       </div>
 
@@ -295,10 +319,6 @@
 
         <article class="col-md-4 sponsor sponsor-sm">
           <img src="/assets/logos/rappler.png" class="img-responsive">
-        </article>
-
-        <article class="col-md-4 sponsor sponsor-sm-margin sponsor-center">
-          <img src="/assets/logos/chikka.png" class="img-responsive">
         </article>
 
       </div>
@@ -466,6 +486,7 @@
   </div><!-- /.modal -->
 
 
+  <script src="assets/vendor/particles.js/particles.min.js"></script>
   <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="assets/js/animate-scroll.js"></script>
@@ -473,5 +494,54 @@
   <script src="assets/js/toggleNav-on-scroll.js"></script>
   <script src="assets/js/mandrill.js"></script>
   <script src="assets/js/scripts.js"></script>
+  <script>
+  var screenSM = window.innerWidth < 960;
+  particlesJS('particle-js', {
+    particles: {
+      color: '#fff',
+      shape: 'edge', // "circle", "edge" or "triangle"
+      opacity: 0.5,
+      size: 2,
+      size_random: true,
+      nb: screenSM ? 50 : 150,
+      line_linked: {
+        enable_auto: true,
+        distance: 100,
+        color: '#fff',
+        opacity: 0.5,
+        width: 1,
+        condensed_mode: {
+          enable: screenSM,
+          rotateX: 600,
+          rotateY: 600
+        }
+      },
+      anim: {
+        enable: true,
+        speed: 0.35
+      }
+    },
+    interactivity: {
+      enable: true,
+      mouse: {
+        distance: 250
+      },
+      detect_on: 'canvas', // "canvas" or "window"
+      mode: 'grab',
+      line_linked: {
+        opacity: .35
+      },
+      events: {
+        onclick: {
+          enable: true,
+          mode: 'push', // "push" or "remove" (particles)
+          nb: 4
+        }
+      }
+    },
+    /* Retina Display Support */
+    retina_detect: true
+  });
+  </script>
 </body>
 </html>
