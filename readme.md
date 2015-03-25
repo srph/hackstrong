@@ -1,8 +1,10 @@
-[![hackstrong_by_seraphipod-d88be78](http://seraphipod.deviantart.com/art/Hackstrong-497697956)]
+[![hackstrong_by_seraphipod-d88be78](https://cloud.githubusercontent.com/assets/5093058/6824669/4184757c-d32f-11e4-9169-5848c7c6a8bb.png)](http://seraphipod.deviantart.com/art/Hackstrong-497697956)
 
 # hackstrong
 
 The website template (*pre-release*) for the first hackstrong event. The codebase was later modified and changed upon production.
+
+\* Codebase was poorly written.. ehh -- but it works -- *It Just Works&#8482;*.
 
 ## Previews
 
@@ -11,12 +13,19 @@ The website template (*pre-release*) for the first hackstrong event. The codebas
 - [Design (desktop / older)](http://seraphipod.deviantart.com/art/Hackstrong-older-499976508)
 - [Design (mobile)](http://seraphipod.deviantart.com/art/Hackstrong-Mobile-older-499976686)
 
-## Building
+## Setup
 
 I don't know why you'd want to (when there's a demo, noob), but here --
 
+First, you'll need [**Node.js**, and **npm**]. And then setting up locally is easy a 1, 2, 3.
+
 ```bash
+# if you haven't installed `gulp` and/or `bower` before
+$ npm install -g gulp bower
+
+# clone
 $ git clone https://github.com/srph/hackstrong.git && cd hackstrong
+# install dependencies
 $ npm install
 $ bower install
 ```
