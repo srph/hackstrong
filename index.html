@@ -10,31 +10,542 @@
   <link rel="stylesheet" href="assets/vendor/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="assets/css/stylesheet.css">
   <style>
-    .home {
-      background-color: #1b2db5;
+    #home {
+      position: absolute;
+      background: linear-gradient(90deg, rgba(255, 0, 0, 0.24), rgba(13, 13, 255, 0.28));
     }
-    @-ms-viewport{
-      width: device-width;
+    #home::before {
+      position: absolute;
+      display: block;
+      content: "";
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5));
+    }
+    #particle-js {
+      top: 0;
+      background: #000;
+      top: 0;
+      width: 100%;
+      height: 100vh;
     }
   </style>
 </head>
-<body>
-  <section class="home">
+<body data-spy="scroll" data-target="#nav">
+  <nav class="navbar navbar-hack navbar-fixed-top" role="navigation" data-navbar-activate id="nav">
+    <section class="container navbar-collapse" id="main-nav">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#home" data-animate-scroll="#home"> Home </a></li>
+        <li><a href="#about" data-animate-scroll="#about"> FAQ </a></li>
+        <li><a href="#judges" data-animate-scroll="#judges"> Judges </a></li>
+        <li><a href="#sponsors" data-animate-scroll="#sponsors"> Sponsors </a></li>
+        <li><a href="#contact" data-animate-scroll="#contact"> Contact </a></li>
+      </ul>
+    </section>
+  </nav>
+  <section class="home" id="home">
     <div class="home-outer-wrapper">
       <div class="home-inner-wrapper container">
-        <img src="assets/img/logo.png" class="home-logo">
-        <h1 class="home-welcome-header bounceInDown animated"> HackStrong </h1>
+        <img src="assets/img/logo.png" class="home-logo zoomInRight animated">
+        <h1 class="home-welcome-header bounceInDown animated"> Hacks </h1>
         <h4 class="home-welcome-sub bounceInUp animated"> At heart, we hack! </h4>
-        <h5 style="margin-top: 50px; letter-spacing: 1px;"> Registrations will be available by December 1 </h4>
-        <h6 style="letter-spacing: 1px; opacity: 0.25; position: absolute; bottom: 25px; left: 0; right: 0;"> Designed by <a href="http://sourcescript.ph" style="color: #fff;"> Sourcescript Innovations </a> </h6>
+
+        <aside class="home-btn-group" style="margin-top: 50px;">
+          <button type="button" data-toggle="modal" data-target="#registrationModal" class="btn btn-inverted-primary btn-rounded">Register Team</button>
+        </aside>
       </div>
     </div>
   </section>
+
+  <div id="particle-js">
+  </div>
+
+  <section class="about" id="about">
+    <h4 class="component-head about-head"> Hackstrong FAQ </h4>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-xs-12 about-item">
+          <div class="about-box">
+            <h5 class="about-box-head">
+              <i class="ion-android-lightbulb about-box-icon"></i>
+              Hacks&mdash;what?!
+            </h5>
+
+            <p class="about-box-text">
+              Hack Strong is a hackathon made for the strong interest of students.
+            </p>
+
+            <div class="text-center about-btn">
+              <button class="btn btn-inverted-dk btn-rounded">
+                <i class="ion-play btn-icon"></i>
+                Play Trailer
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-md-4 about-item">
+          <div class="about-box">
+            <h5 class="about-box-head">
+              <i class="ion-location about-box-icon about-box-icon-lg"></i>
+              Venue
+            </h5>
+
+            <p class="about-box-text">
+              This event will be held on October 18, 2014 at Katipunan, Quezon City.
+            </p>
+
+            <div class="text-center about-btn">
+              <a href="https://www.google.com.ph/maps/place/Ateneo+de+Manila+University/@14.639718,121.078077,17z/data=!3m1!4b1!4m2!3m1!1s0x3397b77fd9e304c9:0x61ad426d7c6cce9e?hl=en" class="btn btn-inverted-dk btn-rounded" target="_blank">
+                <i class="ion-map btn-icon"></i>
+                View Map
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-md-4 about-item">
+          <div class="about-box">
+            <h5 class="about-box-head">
+              <i class="ion-alert-circled about-box-icon about-box-icon-lg"></i>
+              Rules
+            </h5>
+
+            <p class="about-box-text">
+              Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-xs-12 about-item">
+          <div class="about-box">
+            <h5 class="about-box-head">
+              <i class="ion-android-lightbulb about-box-icon"></i>
+              Hacks&mdash;what?!
+            </h5>
+
+            <p class="about-box-text">
+              Hack Strong is a hackathon made for the strong interest of students.
+            </p>
+
+            <div class="text-center about-btn">
+              <button class="btn btn-inverted-dk btn-rounded">
+                <i class="ion-play btn-icon"></i>
+                Play Trailer
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-md-4 about-item">
+          <div class="about-box">
+            <h5 class="about-box-head">
+              <i class="ion-location about-box-icon about-box-icon-lg"></i>
+              Venue
+            </h5>
+
+            <p class="about-box-text">
+              This event will be held on October 18, 2014 at Katipunan, Quezon City.
+            </p>
+
+            <div class="text-center about-btn">
+              <a href="https://www.google.com.ph/maps/place/Ateneo+de+Manila+University/@14.639718,121.078077,17z/data=!3m1!4b1!4m2!3m1!1s0x3397b77fd9e304c9:0x61ad426d7c6cce9e?hl=en" class="btn btn-inverted-dk btn-rounded" target="_blank">
+                <i class="ion-map btn-icon"></i>
+                View Map
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-md-4 about-item">
+          <div class="about-box">
+            <h5 class="about-box-head">
+              <i class="ion-alert-circled about-box-icon about-box-icon-lg"></i>
+              Rules
+            </h5>
+
+            <p class="about-box-text">
+              Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="judges" id="judges">
+    <h4 class="component-head judges-head"> Judges </h4>
+
+    <div class="judge-container">
+      <article class="judge">
+        <div class="col-xs-9 col-md-9">
+          <header>
+            <h4 class="judge-name">Kier Borromeo </h4>
+            <h5 class="judge-title"> Software Engineer, Sourcescript </h5>
+          </header>
+          <p class="judge-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore.
+          </p>
+        </div>
+
+        <div class="col-xs-3 col-md-3">
+          <div class="judge-avatar" style="background-image:url(assets/img/pogi.jpg);">
+          </div>
+        </div>
+      </article>
+
+      <article class="judge">
+        <div class="col-xs-3 col-md-3">
+          <div class="judge-avatar" style="background-image:url(assets/img/jc.jpg);">
+          </div>
+        </div>
+
+        <div class="col-xs-9 col-md-9">
+          <header>
+            <h4 class="judge-name">JC Ricaro</h4>
+            <h5 class="judge-title"> Software Engineer, Sourcescript </h5>
+          </header>
+          <p class="judge-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore.
+          </p>
+        </div>
+      </article>
+
+      <article class="judge">
+        <div class="col-xs-9 col-md-9">
+          <header>
+            <h4 class="judge-name">Mark Penaranda</h4>
+            <h5 class="judge-title"> CEO &amp; Engineer, Sourcescript </h5>
+          </header>
+          <p class="judge-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore.
+          </p>
+        </div>
+
+        <div class="col-xs-3 col-md-3">
+          <div class="judge-avatar" style="background-image:url(assets/img/mark.jpg);">
+          </div>
+        </div>
+      </article>
+
+      <article class="judge">
+        <div class="col-xs-3 col-md-3">
+          <div class="judge-avatar" style="background-image:url(assets/img/ry.jpg);">
+          </div>
+        </div>
+
+        <div class="col-xs-9 col-md-9">
+          <header>
+            <h4 class="judge-name">Ryan Navarroza</h4>
+            <h5 class="judge-title"> Systems Architect, Sourcescript </h5>
+          </header>
+          <p class="judge-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore.
+          </p>
+        </div>
+      </article>
+    </div>
+
+      <!-- button -->
+      <aside class="text-center btn-primary-container btn-special">
+        <button class="btn btn-primary btn-lg btn-rounded" id="be-a-mentor" type="button" data-toggle="modal" data-target="#mentorModal">Be a Mentor!</button>
+      </aside>
+    </div>
+  </section>
+
+  <section class="component sponsors" id="sponsors">
+    <div class="container">
+      <h4 class="component-head sponsors-head">Sponsors </h4>
+      <div class="row">
+        <article class="col-md-4 sponsor">
+          <img src="/assets/logos/_.png" class="img-responsive">
+        </article>
+
+        <article class="col-md-4 sponsor">
+          <img src="/assets/logos/wd.png" class="img-responsive">
+        </article>
+
+        <article class="col-md-4 sponsor">
+          <img src="/assets/logos/ms.png" class="img-responsive">
+        </article>
+
+        <article class="col-md-4 sponsor">
+          <img src="/assets/logos/dunkin.png" class="img-responsive">
+        </article>
+
+        <article class="col-md-4 sponsor sponsor-sm">
+          <img src="/assets/logos/uber.png" class="img-responsive">
+        </article>
+
+        <article class="col-md-4 sponsor">
+          <img src="/assets/logos/dalluyon.png" class="img-responsive">
+        </article>
+
+        <article class="col-md-4 sponsor sponsor-sm-margin sponsor-center">
+          <img src="/assets/logos/chikka.png" class="img-responsive">
+        </article>
+      </div>
+
+      <header class="text-center btn-primary-container btn-special">
+        <button class="btn btn-inverted-primary btn-hover-disable-primary btn-flat sponsor-sub-head">Media</button>
+      </header>
+      <div class="row">
+
+        <!-- media -->
+        <article class="col-md-4 sponsor sponsor-sm-margin-2">
+          <img src="/assets/logos/inquirynet.jpg" class="img-responsive">
+        </article>
+
+        <article class="col-md-4 sponsor sponsor-sm sponsor-sm-margin-2">
+          <img src="/assets/logos/manila_bulletin.jpg" class="img-responsive">
+        </article>
+
+        <article class="col-md-4 sponsor sponsor-sm sponsor-sm-margin-2">
+          <img src="/assets/logos/news_bytes.png" class="img-responsive">
+        </article>
+
+        <article class="col-md-4 sponsor sponsor-sm">
+          <img src="/assets/logos/abs-cbn.jpeg" class="img-responsive">
+        </article>
+
+        <article class="col-md-4 sponsor sponsor-sm-margin">
+          <img src="/assets/logos/anc.jpg" class="img-responsive">
+        </article>
+
+        <article class="col-md-4 sponsor sponsor-sm">
+          <img src="/assets/logos/rappler.png" class="img-responsive">
+        </article>
+        <article class="col-md-4 sponsor sponsor-sm sponsor-center">
+          <img src="/assets/logos/vigattin.jpg" class="img-responsive">
+        </article>
+
+      </div>
+
+      <header class="text-center btn-primary-container btn-special">
+        <button class="btn btn-inverted-primary btn-hover-disable-primary btn-flat sponsor-sub-head">Community</button>
+      </header>
+
+    <div class="row">
+        <!-- comm -->
+        <article class="col-md-4 sponsor sponsor-sm">
+          <img src="/assets/logos/mariadb.png" class="img-responsive">
+        </article>
+
+        <article class="col-md-4 sponsor sponsor-sm">
+          <img src="/assets/logos/firefox.jpg" class="img-responsive">
+        </article>
+
+        <article class="col-md-4 sponsor sponsor-sm">
+          <img src="/assets/logos/drupalph.png" class="img-responsive">
+        </article>
+
+        <article class="col-md-4 sponsor sponsor-sm sponsor-center">
+          <img src="/assets/logos/major_league_hacking.png" class="img-responsive">
+        </article>
+    </div>
+
+      <header class="text-center btn-primary-container btn-special">
+        <button class="btn btn-inverted-primary btn-hover-disable-primary btn-flat sponsor-sub-head">Organizers</button>
+      </header>
+
+    <div class="row">
+
+        <!-- organizer -->
+
+        <article class="col-md-4 sponsor sponsor-sm">
+          <img src="/assets/logos/8layer.png" class="img-responsive">
+        </article>
+
+        <article class="col-md-4 sponsor sponsor-sm">
+          <img src="/assets/logos/ateneo.png" class="img-responsive">
+        </article>
+
+        <article class="col-md-4 sponsor sponsor-sm">
+          <img src="/assets/logos/misa.png" class="img-responsive">
+          <img src="/assets/logos/misa-20.png" class="img-responsive" style="width: 100px">
+        </article>
+
+        <article class="col-md-4 sponsor sponsor-sm-margin sponsor-center">
+          <img src="/assets/logos/rizal_library.png" class="img-responsive">
+        </article>
+      </div>
+
+      <aside class="text-center btn-success-container btn-special">
+        <button type="button" data-toggle="modal" data-target="#sponsorModal" class="btn btn-success btn-rounded">Be a Sponsor!</button>
+      </aside>
+    </div>
+  </section>
+
+  <footer class="contact" id="contact">
+    <div class="container">
+      <p class="text-center">
+        Contact us at <a href="emailto:ateneohacks@gmail.com">ateneohacks@gmail.com</a>.
+      </p>
+    </div>
+  </footer>
+
+  <!-- REGISTRATION -->
+  <div class="modal fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="registrationModalLabel" aria-hidden="true">
+    <form class="modal-dialog" id="registration-form" name="registration">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title">Register your team</h4>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+              <label> Email </label>
+              <input type="email" class="form-control" id="registration-email" placeholder="leader@email.com" required>
+            </div>
+
+            <div class="form-group">
+              <label> Subject </label>
+              <input type="text" class="form-control" id="registration-subject" placeholder="[Registration] <Team Name>" required>
+            </div>
+
+            <div class="form-group">
+              <label> Message </label>
+              <textarea name="registration-message"  id="registration-message" class="form-control" placeholder="Introduce your team..." required></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer clearfix">
+          <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Send Email</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </form><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+
+  <!-- Mentor  Modal -->
+  <div class="modal fade" id="mentorModal" tabindex="-1" role="dialog" aria-labelledby="mentorModalLabel" aria-hidden="true">
+    <form class="modal-dialog" id="mentor-form" name="mentor">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title">Apply as a mentor</h4>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+              <label> Email </label>
+              <input type="email" class="form-control" id="mentor-email" placeholder="your@email.com" required>
+            </div>
+
+            <div class="form-group">
+              <label> Subject </label>
+              <input type="text" class="form-control" id="mentor-subject" placeholder="[Mentor] <Your Name>" required>
+            </div>
+
+            <div class="form-group">
+              <label> Message </label>
+              <textarea name="mentor-message"  id="mentor-message" class="form-control" placeholder="Introduce yourself..." required></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer clearfix">
+          <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Apply</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </form><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <!-- sponsor  Modal -->
+  <div class="modal fade" id="sponsorModal" tabindex="-1" role="dialog" aria-labelledby="sponsorModalLabel" aria-hidden="true">
+    <form class="modal-dialog" id="sponsor-form" name="sponsor">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title">Apply as a sponsor</h4>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+              <label> Email </label>
+              <input type="email" class="form-control" id="sponsor-email" placeholder="your@email.com" required>
+            </div>
+
+            <div class="form-group">
+              <label> Subject </label>
+              <input type="text" class="form-control" id="sponsor-subject" placeholder="[Sponsor] <Company Name>" required>
+            </div>
+
+            <div class="form-group">
+              <label> Message </label>
+              <textarea name="sponsor-message"  id="sponsor-message" class="form-control" placeholder="Introduce your company..." required></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer clearfix">
+          <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Apply</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </form><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+
+  <script src="assets/vendor/particles.js/particles.min.js"></script>
   <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="assets/js/animate-scroll.js"></script>
   <script src="assets/js/fade-on-scroll.js"></script>
   <script src="assets/js/toggleNav-on-scroll.js"></script>
+  <script src="assets/js/mandrill.js"></script>
   <script src="assets/js/scripts.js"></script>
+  <script>
+  var screenSM = window.innerWidth < 960;
+  particlesJS('particle-js', {
+    particles: {
+      color: '#fff',
+      shape: 'edge', // "circle", "edge" or "triangle"
+      opacity: 0.5,
+      size: 2,
+      size_random: true,
+      nb: screenSM ? 50 : 150,
+      line_linked: {
+        enable_auto: true,
+        distance: 100,
+        color: '#fff',
+        opacity: 0.5,
+        width: 1,
+        condensed_mode: {
+          enable: screenSM,
+          rotateX: 600,
+          rotateY: 600
+        }
+      },
+      anim: {
+        enable: true,
+        speed: 0.35
+      }
+    },
+    interactivity: {
+      enable: true,
+      mouse: {
+        distance: 250
+      },
+      detect_on: 'canvas', // "canvas" or "window"
+      mode: 'grab',
+      line_linked: {
+        opacity: .35
+      },
+      events: {
+        onclick: {
+          enable: true,
+          mode: 'push', // "push" or "remove" (particles)
+          nb: 4
+        }
+      }
+    },
+    /* Retina Display Support */
+    retina_detect: true
+  });
+  </script>
 </body>
 </html>
