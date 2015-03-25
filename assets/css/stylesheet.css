@@ -213,8 +213,7 @@ body {
   color: #000;
   border-color: transparent;
   background-color: #ffffff;
-  -webkit-transition: all 0.2s;
-          transition: all 0.2s;
+  transition: all 0.2s;
 }
 .btn.btn-rounded {
   border-radius: 20px;
@@ -493,8 +492,7 @@ body {
 }
 .home .home-welcome-shadow {
   text-shadow: #1829a3 1px 1px, #1829a3 2px 2px, #1829a3 3px 3px, #1829a3 4px 4px, #1829a3 5px 5px, #1829a5 6px 6px, #1829a7 7px 7px, #192aa9 8px 8px, #192aab 9px 9px, #192bad 10px 10px, #1a2baf 11px 11px, #1a2cb1 12px 12px, #1a2cb3 13px 13px, #1b2db5 14px 14px;
-  -webkit-transition: all 0.5s ease;
-          transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 .home .home-welcome-sub::before {
   position: relative;
@@ -764,8 +762,7 @@ body {
   margin-right: auto;
   text-align: center;
   margin-bottom: 150px;
-  -webkit-transition: all 0.4s;
-          transition: all 0.4s;
+  transition: all 0.4s;
 }
 .sponsor img {
   width: 75%;
@@ -923,13 +920,11 @@ body {
 }
 .navbar-hack.upwards {
   top: -50px;
-  -webkit-transition: 1s all;
-          transition: 1s all;
+  transition: 1s all;
 }
 .navbar-hack.downwards {
   top: 0;
-  -webkit-transition: 1s all;
-          transition: 1s all;
+  transition: 1s all;
 }
 .navbar-hack.is-active .navbar-brand,
 .navbar-hack.is-active li a {
@@ -984,8 +979,7 @@ body {
   }
 }
 .hamburger.is-active .icon-bar {
-  -webkit-transition: 0.5s;
-          transition: 0.5s;
+  transition: 0.5s;
 }
 .hamburger.is-active .first-line {
   -webkit-transform: rotate(45deg);
